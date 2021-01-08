@@ -24,13 +24,13 @@ resource "azurerm_key_vault" "kv" {
 
     content {
       tenant_id      = var.tenant_id
-      object_id      = network_acls.value.object_id
-      application_id = network_acls.value.application_id
+      object_id      = access_policy.value.object_id
+      application_id = lookup(access_policy.value, "application_id", null)
 
-      certificate_permissions = network_acls.value.certificate_permissions
-      key_permissions         = network_acls.value.key_permissions
-      secret_permissions      = network_acls.value.secret_permissions
-      storage_permissions     = network_acls.value.storage_permissions
+      certificate_permissions = lookup(access_policy.value, "certificate_permissions", null)
+      key_permissions         = lookup(access_policy.value, "key_permissions", null)
+      secret_permissions      = lookup(access_policy.value, "secret_permissions", null)
+      storage_permissions     = lookup(access_policy.value, "storage_permissions", null)
     }
   }
 

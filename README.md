@@ -9,7 +9,7 @@ See `variables.tf` for more information about input values.
 ## Usage
 
 ```hcl
-module "automation_account"
+module "kv"
   source = "github.com/scalair/terraform-azure-key-vault"
 
   location              = "francecentral"

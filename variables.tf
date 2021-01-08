@@ -25,14 +25,7 @@ variable "tenant_id" {
 }
 
 variable "access_policy" {
-  type = list(object({
-    object_id               = string
-    application_id          = string
-    certificate_permissions = list(string)
-    key_permissions         = list(string)
-    secret_permissions      = list(string)
-    storage_permissions     = list(string)
-  }))
+  type = list(any)
   description = "(Optional) A list of up to 16 objects describing access policies."
   default     = []
 }

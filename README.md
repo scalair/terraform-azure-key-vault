@@ -2,7 +2,7 @@
 
 Terraform module to manage an `Azure Key Vault`.
 
-![Terraform Version](https://img.shields.io/badge/Terraform-0.12.x-green.svg)
+![Terraform Version](https://img.shields.io/badge/Terraform-0.12.x-green.svg) ![Terraform Version](https://img.shields.io/badge/Terraform-0.13.x-green.svg)
 
 See `variables.tf` for more information about input values.
 

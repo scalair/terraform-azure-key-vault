@@ -30,6 +30,12 @@ variable "access_policy" {
   default     = []
 }
 
+variable "certificates" {
+  type = list(any)
+  description = "(Optional) A list of self signed certificates"
+  default     = []
+}
+
 variable "enabled_for_deployment" {
   type        = bool
   description = "(Optional) Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to false."
